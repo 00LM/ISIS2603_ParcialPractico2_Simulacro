@@ -11,6 +11,7 @@ export class Recipe {
   imagen: string;
   etiquetas: string[];
   ingredientes: Ingredient[];
+  numeroIngredientes: number; 
 
   constructor(
     id: number,
@@ -22,7 +23,8 @@ export class Recipe {
     tipo: string,
     imagen: string,
     etiquetas: string[],
-    ingredientes: Ingredient[]
+    ingredientes: Ingredient[],
+    numeroIngredientes: number
   ) {
     this.id = id;
     this.nombre = nombre;
@@ -34,5 +36,6 @@ export class Recipe {
     this.imagen = imagen;
     this.etiquetas = etiquetas;
     this.ingredientes = ingredientes;
+    this.numeroIngredientes = numeroIngredientes;
   }
 }
