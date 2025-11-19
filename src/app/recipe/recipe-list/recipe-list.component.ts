@@ -18,6 +18,7 @@ export class RecipeListComponent implements OnInit {
   constructor(private recipeService: RecipeService, private router: Router) {}
 
   contarIngredientes(recipe: Recipe) {
+    recipe.numeroIngredientes = 0;
     for (const element of recipe.ingredientes) {
         recipe.numeroIngredientes += 1;
       }

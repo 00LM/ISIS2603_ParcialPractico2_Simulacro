@@ -1,23 +1,38 @@
-<div class="recipe-detail">
-  <h2>{{ recipe.nombre }}</h2>
-  <img
-    class="recipe-detail-img"
-    [src]="recipe.imagen"
-    alt="{{ recipe.imagen }}"
-  />
-  <p><strong>Porciones:</strong> {{ recipe.porciones }}</p>
-  <p><strong>Tiempo:</strong> {{ recipe.tiempo_minutos }} min</p>
-  <h3>Ingredientes</h3>
-  <app-ingredient-list
-    [ingredients]="recipe.ingredientes"
-  ></app-ingredient-list>
+  <div class="recipe-card">
 
-  <h3>Pasos</h3>
-  <ol>
-    @for(step of recipe.pasos; track step){
-    <li>
-      {{ step }}
-    </li>
-    }
-  </ol>
-</div>
+    <h1 class="title">{{ recipe.nombre }}</h1>
+
+    <div class="recipe-content">
+      <img class="recipe-image" [src]="recipe.imagen" alt="Imagen receta">
+
+      <div class="recipe-info">
+
+        <div class="grid">
+          <p><strong>Porciones:</strong> {{ recipe.porciones }}</p>
+          <p><strong>Tiempo:</strong> {{ recipe.tiempo_minutos }} min</p>
+          <p><strong>Dificultad:</strong> {{ recipe.dificultad }}</p>
+          <p><strong>Tipo:</strong> {{ recipe.tipo }}</p>
+        </div>
+
+        <h2>Ingredientes</h2>
+        <ul>
+          @for(ing of recipe.ingredientes; track ing){
+            <li>{{ ing.nombre }}</li>
+          }
+        </ul>
+
+        <h2>Pasos</h2>
+        <ol>
+          @for(step of recipe.pasos; track step){
+            <li>{{ step }}</li>
+          }
+        </ol>
+
+      </div>
+    </div>
+
+    <a routerLink="/recipe">
+      <button class="btn">Regresar</button>
+    </a>
+
+  </div>

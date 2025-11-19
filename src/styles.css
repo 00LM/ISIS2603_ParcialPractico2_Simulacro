@@ -63,3 +63,67 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.page-background {
+  background-color: #f7c3d0;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Card blanca */
+.recipe-card {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Título centrado */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de imagen + texto */
+.recipe-content {
+  display: flex;
+  gap: 30px;
+}
+
+/* Imagen */
+.recipe-image {
+  width: 380px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Columna derecha */
+.recipe-info {
+  flex: 1;
+}
+
+/* Grid para los datos de arriba */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+/* Botón azul */
+.btn {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
